@@ -1,0 +1,410 @@
+<html>
+    <head>
+        <link rel = "icon" href ="water.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <title>Home | Dangers of the Water Crisis</title>
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+        <style>
+        .navHeader
+        {
+            font-family: "Montserrat", sans-serif;
+            list-style-type: none;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .buttonTO
+        {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color:white
+        }
+
+        li 
+        {
+            float: left;
+        }
+
+        li a , .dropbtn, button
+        {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) 
+        {
+            background-color: gray;
+        }
+
+        li.dropdown 
+        {
+            display: inline-block;
+        }
+
+        .dropdown-content 
+        {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            text-align: justify;
+        }
+
+        .dropdown-content a 
+        {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: justify;
+        }
+
+        .dropdown-content a:hover 
+        {
+            background-color: #f1f1f170;
+        }
+
+        .dropdown:hover .dropdown-content 
+        {
+            display: block;
+        }
+
+        h1
+        {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            border: solid 5px white;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 220px;
+            padding-bottom: 220px;
+            background-image: url("waterafrica.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+        }
+
+        p, ol, .FAQ
+        {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            margin-left: 20px;
+            margin-right: auto;
+        }
+
+        h2
+        {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .bodyParagraph, .bodyParagraph2, .bodyParagraph3, .bodyParagraph4
+        {
+            border: solid 1px black;
+            margin-left: 15px;
+            margin-right: 15px;
+            background-color: #6b9ce6;
+        }
+
+        iframe
+        {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .container
+        {
+            position: relative;
+            float: right;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 25px;
+            width: 47.75%;
+        } 
+
+        .compare
+        {
+            float: right;
+            margin-left: 25px;
+            margin-right: auto;
+            width: 672;
+            height: 315;
+            margin-top: 5px;
+        }
+
+        .overlay
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .7s ease-in-out;
+            background-image: linear-gradient(to bottom right, rgb(240, 122, 240), rgb(128, 206, 241));
+        }
+
+        .container:hover .overlay 
+        {
+            opacity: 1;
+        }
+
+        .text 
+        {
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .dark-mode
+        {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .mySlides 
+        {
+            display: none
+        }
+        
+        .comp 
+        {
+            width: 672px;
+            height: 315px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container 
+        {
+            max-width: 672px;
+            position: relative;
+            float: left;
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next 
+        {
+            cursor: crosshair;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.4s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next 
+        {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover 
+        {
+            background-color: rgba(255, 255, 255, 0.63);
+        }
+
+        /* Caption text */
+        .tex1 
+        {
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext 
+        {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Fading animation */
+        .fade 
+        {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade 
+        {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        @keyframes fade 
+        {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) 
+        {
+            .prev, .next,.text {font-size: 11px}
+        }
+
+        .unorderedList
+        {
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+
+        }
+
+        </style>
+    </head>
+    <body>
+        <ul class = "navHeader">
+            <li><a href = "file:///Users/sachin.rastogi/Desktop/coding%20project2/finalproject.html#">Home</a></li>
+            <li><a href = "https://www.nytimes.com/topic/subject/water">Learn More</a></li>
+            <li><a href = "https://www.un.org/en/sections/about-un/how-donate-united-nations-system/index.html">Donate!</a></li>
+            <li><a href = "https://www.waterforpeople.org/volunteer/">Get involved!</a></li>
+            <li style = "float: right"><a href = "file:///Users/sachin.rastogi/Desktop/coding%20project2/sources.html">Sources</a></li>
+            <li class = "dropdown">
+                <a href = "javacript:void(0)" class = "droptn">Share with:</a>
+                <div class = "dropdown-content">
+                    <a href = "https://www.facebook.com/">Facebook
+                        <img src="https://img.icons8.com/clouds/50/000000/facebook-new.png"/></a>  
+                    <a href = "https://www.instagram.com/">Instagram
+                        <img src="https://img.icons8.com/doodle/40/000000/instagram-new.png"/></a>
+                    <a href = "https://www.reddit.com/">Reddit
+                        <img src="https://img.icons8.com/bubbles/50/000000/reddit.png"/></a>
+                    <a href = "https://twitter.com/?lang=en">Twitter
+                        <img src="https://img.icons8.com/doodle/40/000000/twitter--v1.png"/></a>
+                    <a href = "https://www.pinterest.ca/">Pintrest
+                        <img src="https://img.icons8.com/dusk/40/000000/pinterest.png"/></a>
+                </div>
+            </li>
+            <li><button class = "buttonTO" onclick = "myFunction()">Toggle light/dark mode</button></li>
+        </ul>
+        <h1>Dangers of the Water Crisis</h1>
+        <h2 class = "bodyParagraph">Why is water important for sustainable development?</h2>
+        <p>Water is universal, we all utilise it in one way or another. It connects person to person, person to place, and person to object. Water is critical for sustainable development and is crucial for socio-economical development, thriving ecosystems, and for us humans as well.  It is vital for reducing fatal diseases and improving the health, welfare and productivity of populations. It is central to the production and preservation of a host of benefits and services for people. Water is also at the heart of adaption to an only recently televised global issue: climate change. It serves as a crucial ink between the climate system, human society, and our surrounding environment. We need clean water on this planet to do almost anything imagineable.</p>
+        <h2 class = "bodyParagraph2">What is the water crisis?</h2>
+        <p>The Earth as you may know is comprised of 97 percent saltwater, 2 percent frozen freshwater in ice caps, and less than 1 percent drinkable freshwater. The Water Crisis however is, "not about having too little water to satisfy our needs. It is a crisis of managing water so badly that billions of people, and the environment suffer badly." What this quotation from <i>World Water Vision Report</i> means is that our problem is that there is not enough water in general, as this may be a future problem, the problem is that we manage our consumption and reproduction very poorly; that there is mis-use of valuable clean water and there is hoarding of clean water.
+        Water Scarcity is brutal and the facts show. Over 785 <strong>million</strong> people do not have acess to clean water. That is over 1/10 of the global population and yet we choose to ignore this blatant crisis which will only continue to grow the longer we dismiss it. Though this may seem detrimental enough, the water crisis does not solely affect the access to clean water, it is also:</p>
+        <ol>
+            <li><i>A women's crisis:</i> Women are disproportionately affected by the water crisis, as they are often responsible for collecting water. Every day, women around the world spend a combined total of 266 million hours a day trying to find a place to receive water sometime without a choice for clean water. This takes time away from work, school and caring for family. The lack of water and sanitation locks women in a cycle of poverty.<br><br> </li>
+            <li><i>A health crisis:</i> The water crisis is a health crisis. Nearly 1 million people die each year from water, sanitation and hygiene-related diseases which could be reduced with access to safe water or sanitation. Every 2 minutes a child dies from a water-related disease. Access to safe water and sanitation contributes to improved health and helps prevent the spread of infectious diseases. It means reduced child and maternal mortality rates. It means reduced physical injury from constant lifting and carrying heavy loads of water.<br><br></li>
+            <li><i>A youth education crisis:</i> When children don’t have access to water at home, they are often responsible for collecting it for their families. Sharing the burden with their mothers, children around the world spend 200 million hours each day collecting water. This takes time away from school. Likewise, poor sanitation keeps kids, especially girls, from being able to go to school.<br><br></li>
+            <li><i>An ecomnomic crisis:</i> Time spent gathering water or seeking safe sanitation accounts for billions in lost economic opportunities. $260 billion is lost globally each year due to lack of basic water and sanitation. Access to safe water and sanitation at home turns time spent into time saved, giving families more time to pursue education and work opportunities that will help them break the cycle of poverty.<br><br></li>
+        </ol><br>
+        <iframe width="672" height="315" src="https://www.youtube.com/embed/C65iqOSCZOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width = "672" height = "315" src="https://www.youtube.com/embed/vB68xvRb2T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="slideshow-container" style = "float: right, margin-top: 25px">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 2</div>
+              <img class = "comp" src= "Vancouver.jpg" style = "width:672 px, height: 315px">
+              <div class = "tex1">Water Treatement Plant in Vancouver, B.C</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 2</div>
+              <img class = "comp" src= "Sask.jpeg" style = "width: 672px, height: 315px">
+              <div class = "tex1">Water Treatement Plant in Saskatoon, Saskatchewan</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class = "container">
+            <img class = "compare" style = "float: right" src = "Waterwells.jpg" alt = "Waterwells">
+            <div class = "overlay" style = "display: inline-block" >
+                <div class = "text">Poor villagers in rural Africa collect water using the traditional method of filling up a container from the closest fresh water source and carrying it back using the same route. There is no sanitation here in the slightest and whatever water is collected is used for day-to-day routines</div>
+                </div>
+        </div>
+        <p style = "color: white">We can see the clear difference of water sanitation and treatement in a third world country compared to a first world country</p>
+        <h2 class = "bodyParagraph3">What are the Consequences of Inadequate sanitation</h2>
+        <p>Some 827 000 people in low and middle-income countries die as a result of inadequate water, sanitation, and hygiene each year, representing 60% of total diarrhoeal deaths. Poor sanitation is believed to be the main cause in some 432 000 of these deaths. Diarrhoea remains a major killer but is largely preventable. Better water, sanitation, and hygiene could prevent the deaths of 297 000 children aged under 5 years each year. Open defecation creates an everlasting vicious cycle of disease and poverty. The countries where open defection is most widespread have the highest number of deaths of children aged under 5 years as well as the highest levels of malnutrition and poverty, and big disparities of wealth. Inadequate sanitation is linked to transmission of diseases such as cholera, diarrhoea, dysentery, hepatitis A, typhoid and polio, while also reduces human well-being, social and economic development due to impacts such as anxiety, risk of sexual assault, and lost educational opportunities.</p>
+        <h2 class = "bodyParagraph4">How can you help?</h2>
+        <ul class = "unorderedList">
+            <li><i>Learn more</i> about topics you are passionate about. It is important to be educated to understand serious global matters such as the Water Crisis. There are many reasons why it is difficult to get of the everlasting cycle I talked about so by learning the facts, it is easier to show more sympathy/empathy to other who bear the conditions that we have the privilege to not cope with<br><br> </li>
+            <li><i>Share and discuss</i> with others about the Water Crisis. The more people that are exposed to the brutality in the world will educate themselves further. The saying <q>The more the merrier</q> to this situation as the more people equals more change. Talk to others and educate others in a responsible an a respectful manner as well so they are more likely to support your cause. Inspire Change!<br><br></li>
+            <li><i>Donate</i> to causes you support. It is important to donate to a cause you support because donating to the causes you care about not only benefits the charities themselves, it can be deeply rewarding for you too. Millions of people give to charity on a regular basis to support causes they believe in, as well as for the positive effect it has on their own lives. Donations that consist of any value are cherished by all donation options. 1 dollar can build a well in rural areas in third world countries that are more convinient for access to clean water so don't be shy, pitch in a bit!<br><br></li>
+            <li><i>Volunteer</i> for the World Water Corps. The more you give whether that's time or effort, the happier we feel. Volunteering increases self-confidence. You are doing good for others and the community, which provides a natural sense of accomplishment. And the better you feel about yourself, the more likely you are to have a positive view of your life and future goals. <br><br></li>
+    </body>
+    <script>
+        function myFunction() 
+        {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) 
+        {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) 
+        {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) 
+        {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}  
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) 
+            {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) 
+            {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+        </script>
+</html>
